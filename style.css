@@ -1,0 +1,624 @@
+/*
+Theme Name: thetoprealestatevallarta
+Theme URI: https://thetoprealestatevallarta.com
+Author: Jesús López Velázquez
+Author URI: https://thetoprealestatevallarta.com
+Description: Tema basado en MDBOOSTRAP 5
+Version: 1.0
+*/
+
+
+/** FONTS 
+ * 
+ * font-family: 'Abril Fatface', cursive;
+font-family: 'Raleway', sans-serif;
+
+**/
+
+/*** GENERALES ***/
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+section{
+	margin: 75px 0;
+}
+
+
+.separar{
+    clear: both;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: calc(100vh - 110px);
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+#hero .carousel-item {
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#hero .carousel-item::before {
+    content: "";
+    background-color: rgba(13, 30, 45, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+#hero .carousel-content {
+    text-align: left;
+}
+
+@media (max-width: 992px) {
+
+    #hero,
+    #hero .carousel-item {
+        height: calc(100vh - 70px);
+    }
+
+    #hero .carousel-content.container {
+        padding: 0 50px;
+    }
+}
+
+#hero h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 48px;
+    /*font-weight: 900;*/
+}
+
+#hero p {
+    width: 80%;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    color: #fff;
+}
+
+#hero .carousel-inner .carousel-item {
+    transition-property: opacity;
+    background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+    opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-prev,
+#hero .carousel-control-next {
+    width: 10%;
+}
+
+#hero .carousel-control-next-icon,
+#hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 48px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+}
+
+#hero .carousel-indicators li {
+    cursor: pointer;
+}
+
+#hero .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 0;
+    background: #428bca;
+}
+
+#hero .btn-get-started:hover {
+    background: #1c5c93;
+}
+
+
+/** CARD  HOME **/
+
+.cards{
+	margin-bottom: 2rem;
+}
+.card {
+	border-radius: 0;
+}
+
+.card-img, .card-img-top {
+	border-radius: 0;
+}
+
+.card-precio{
+	font-size: 120%;
+}
+
+.card-title{
+	text-transform: uppercase;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    max-height: 200px;
+}
+
+
+/** NABVAR ***/
+
+.nav-link {
+    color: #8b8b8b;
+}
+
+.navbar{
+	text-transform: uppercase;
+}
+
+li.nav-item {
+    border-right: solid #000 thin;
+}
+
+/*** BUTTONS **/
+
+.btn {
+	border-radius: 0;
+}
+
+.btn-primary{
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.btn-primary:hover{
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+}
+
+/** BANNER ***/
+
+.banner{
+	height: 70vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.banner h1, .banner h2{
+	color: #fff;
+}
+
+.banner h2{
+    font-size: 1.3rem;
+}
+
+.banner-info{
+	height: inherit;
+	padding: 1rem;
+	background-color: rgba(255, 255, 255, 0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/** WHTAS **/
+
+.link-wa {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.icon-wa {
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*** SINGLE PROPERTY ***/
+
+.data-property{
+	background-color: #000;
+	color: #fff;
+	padding: .5rem;
+	margin-bottom: .2rem;
+}
+
+.presale{
+    background-color: #000;
+    color: #fff;
+    padding: .5rem;
+    margin-bottom: .2rem;
+}
+
+
+.amenidades ul{
+	 padding: 0;
+	 --icon-space: 1.3em;
+}
+
+.amenidades	li{
+	font-weight: 800;
+	list-style-type: none;
+	 padding-left: var(--icon-space);
+}
+
+.amenidades li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  margin-left: calc( var(--icon-space) * -1 );
+  margin-right: calc( var(--icon-space) * .7);
+  width: var(--icon-space);
+}
+
+.data-property i.fa-solid{
+	font-size: 1rem;
+}
+
+.download-pdf{
+   background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    padding: .6rem .5rem .4rem;
+}
+
+.download-pdf a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.thumbnail-gallery {
+    margin-bottom: 1rem;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+}
+
+.thumbnail-image{
+    width: 100%;
+}
+
+.thumbnail-image img{
+    width: 100%;
+}
+
+.thumbnail-gallery{
+    margin-bottom: 1rem;
+}
+
+.thumbnail-gallery img{
+    width: 100%;
+}
+
+/** VIDEO RESPONSIVE ***/
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    }
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
+
+
+.logo-whatsapp{
+    text-align: center;
+    background-color:#44c767;
+    border-radius:10px;
+    border:1px solid #18ab29;
+    display:block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:13px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.logo-whatsapp a{
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+/***** BLOG *****/
+
+.agent img{
+    width: 100%;
+}
+
+
+.category-blog{
+    max-height: 200px;
+    overflow-y: hidden;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.category-blog img{
+    width: 100%;
+}
+
+
+.content-blog img{
+    width: 70%;
+    text-align: center;
+    margin: 2rem;
+}
+
+.image-blog{
+    width: 80;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.image-blog img{
+    width: 100%;
+}
+
+figure.wp-block-image.size-full {
+    text-align: center;
+}
+
+/*  SOCIAL **/
+
+.share-button-wrapper{
+  margin-top: 2em;
+}
+
+.share-button{
+  padding: 1em;
+  display: inline-block;
+  margin-bottom: .7em;
+}
+
+.share-twitter{
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.share-twitter:hover{
+  background-color: #14171a;
+  color: #fff;
+}
+
+.share-facebook{
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.share-facebook:hover{
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.share-whatsapp{
+  background-color: #25d366;
+  color: #fff;
+}
+
+.share-whatsapp:hover{
+  background-color: #075e54;
+  color: #fff;
+}
+
+.share-linkedin{
+  background-color: #0a66c2;
+  color: #fff;
+}
+
+.share-linkedin:hover{
+  background-color: #000000;
+  color: #fff;
+}
+
+/** TAGS***/
+
+.nube{
+    text-align: center;
+    font-size: 1rem;
+}
+
+a.tag-cloud-link{
+    background: #999;
+    padding: 0.5rem;
+    color: #fff;
+    margin: 0.2rem;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+
+
+/*** FOOTER ***/
+
+footer{
+	padding: 3rem 0;
+	background: #141E30;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	color: #fff;
+}
+
+footer h3{
+	font-size: 110%;
+}
+
+footer p{
+	font-size: 90%;
+	/**line-height: %;*/
+}
+
+footer a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.social-icons{
+	margin-top: 1rem;
+}
+
+
+.social-icons a{
+	margin: 0 .4rem;
+}
+.footer-logos{
+	text-align: center;
+}
+.footer-logos img{
+	height: 40px;
+	margin: 1rem .5rem;
+}
+
+
+/** COOL IMAGES  **/
+
+#publicity{
+	display: flex;
+}
+.cool-image-1{
+	width: 33%;
+	height: 500px;
+	background-size: cover;
+	background-repeat:no-repeat;
+    background-position: center center;
+	overflow-y: hidden;
+}
+
+/*.cool-image-2{
+	width: 33%;
+	height: 500px;
+	background-size: cover;
+	background-repeat:no-repeat;
+    background-position: center center;
+	overflow-y: hidden;
+}*/
+
+
+.cool-image img{
+	width: 100%;
+}
+
+/** AGENTES ***/
+
+.agents{
+    padding: 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.agent-biography{
+    background-color: rgba(255, 255, 255, .5);
+    padding: 1.7rem;
+}
+
+/*** BREAK POINTS ***/
+
+@media (min-width: 576px) {
+
+    .thumbnail-gallery {
+
+        height: 100px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+
+}
+
+@media (min-width: 992px) {
+
+	.banner-info{
+		padding: 3rem;
+	}
+
+}
+
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}
+
